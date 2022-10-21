@@ -6,74 +6,97 @@ import {
     ScrollView,
     FlatList,
     Dimensions,
-  } from 'react-native';
-  import React from 'react';
-  
-  const TopProducts = () => {
+} from 'react-native';
+import React from 'react';
+
+const TopProducts = () => {
     const DATA = [
-      {
-        id: '1',
-        title: 'Second Item',
-      },
-      {
-        id: '2',
-        title: 'Third Item',
-      },
-      {
-        id: '3',
-        title: 'First Item',
-      },
-      {
-        id: '4',
-        title: 'Second Item',
-      },
+        {
+            id: '1',
+            title: 'Second Item',
+            img: require('../assets/img/image133.png'),
+        },
+        {
+            id: '2',
+            title: 'Third Item',
+            img: require('../assets/img/image134.png'),
+
+        },
+        {
+            id: '3',
+            title: 'First Item',
+            img: require('../assets/img/image135.png'),
+
+        },
+        {
+            id: '4',
+            title: 'Second Item',
+            img: require('../assets/img/image20.png'),
+
+        },
+        {
+            id: '5',
+            title: 'Third Item',
+            img: require('../assets/img/image21.png'),
+
+        }, ,
+        {
+            id: '6',
+            title: 'Third Item',
+            img: require('../assets/img/image22.png'),
+
+        }, ,
+        {
+            id: '7',
+            title: 'Third Item',
+            img: require('../assets/img/image23.png'),
+
+        },
     ];
-  
+
     const windowWidth = Dimensions.get('window').width;
-    const renderItem = () => (
-      <View
-        style={[
-          styles.item,
-          {
-            width: (windowWidth - 46) / 2,
-            backgroundColor: 'red',
-          },
-        ]}>
-        <Image
-          style={styles.picture}
-          source={require('../assets/img/download.jpg')}
-        />
-        <Text>Image1</Text>
-      </View>
+    const renderItem = ({item}) => (
+        <View
+            style={[
+                styles.item,{
+                    width: (windowWidth - 46) / 2,
+                },
+            ]}>
+            <Image
+                style={styles.picture}
+                source={item.img}
+            />
+            <Text>{item.title}</Text>
+        </View>
     );
-  
+
     return (
-      <View style={styles.container}>
-        <FlatList
-          columnWrapperStyle={{justifyContent: 'space-between'}}
-          data={DATA}
-          numColumns={2}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
-      </View>
+        <View style={styles.container}>
+            <FlatList
+                columnWrapperStyle={{ justifyContent: 'space-between' }}
+                data={DATA}
+                numColumns={2}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+            />
+        </View>
     );
-  };
-  const styles = StyleSheet.create({
+};
+const styles = StyleSheet.create({
     container: {
-      marginTop: 20,
+        marginTop: 20,
     },
     item: {
-      borderWidth: 1,
-      borderColor: 'grey',
-      alignItems: 'center',
-      margin: 10,
-      height: 180,
+        Width: 157,
+        height:250,
+        backgroundColor:'red',
+        marginVertical:20,
+         
     },
     picture: {
-      top: 10,
-      width: 100,
-      height: 150,
+        top: 10,
+        width: 116,
+        height: 119,
     },
-  });
-  export default TopProducts;
+});
+export default TopProducts;

@@ -36,11 +36,12 @@ const styles = StyleSheet.create({
     top: 50,
   },
   title_main: {
-    fontSize: 15,
+    fontSize: 18,
     color: '#1987FB',
     fontweight: '700',
   },
   title_item: {
+    fontweight: 300,
     width: 160,
     top: 10,
     color: 'rgba(9, 15, 71, 0.65)',
