@@ -6,96 +6,108 @@ import {
     ScrollView,
     FlatList,
     Dimensions,
-  } from 'react-native';
-  import React from 'react';
-  
-  const TopProducts = () => {
+    TouchableOpacity,
+ 
+} from 'react-native';
+import React from 'react';
+
+const TopProducts = () => {
     const DATA = [
-      {
-        id: '1',
-        title: 'Second Item',
-      },
-      {
-        id: '2',
-        title: 'Third Item',
-      },
-      {
-        id: '3',
-        title: 'First Item',
-      },
-      {
-        id: '4',
-        title: 'Second Item',
-      },
-      {
-        id: '5',
-        title: 'Third Item',
-      },
+        {
+            id: '1',
+            title: 'Second Item',
+            img: require('../assets/img/image133.png'),
+        },
+        {
+            id: '2',
+            title: 'Third Item',
+            img: require('../assets/img/image134.png'),
+
+        },
+        {
+            id: '3',
+            title: 'First Item',
+            img: require('../assets/img/image135.png'),
+
+        },
+        {
+            id: '4',
+            title: 'Second Item',
+            img: require('../assets/img/image20.png'),
+
+        },
+        {
+            id: '5',
+            title: 'Third Item',
+            img: require('../assets/img/image21.png'),
+
+        }, ,
+        {
+            id: '6',
+            title: 'Third Item',
+            img: require('../assets/img/image22.png'),
+
+        }, ,
+        {
+            id: '7',
+            title: 'Third Item',
+            img: require('../assets/img/image23.png'),
+
+        },
     ];
-    const renderItem = () => (
-      <View
-        style={[
-          styles.item,
-          {
-            width: (windowWidth - 56) / 2,
-            backgroundColor: 'red',
-          },
-        ]}>
-        <Image
-          style={styles.picture}
-          source={require('../assets/img/download.jpg')}
-        />
-        <Text>Image1</Text>
-      </View>
-    );
-  
+
+
     return (
-      <View style={styles.container}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {[1, 2, 3, 4, 5].map(() => {
-            return (
-              <View style={styles.item}>
-                <Image
-                  style={styles.picture}
-                  source={require('../assets/img/download.jpg')}
-                />
-                <Text style={styles.title}>Image1</Text>
-              </View>
-            );
-          })}
-        </ScrollView>
-      </View>
+            <ScrollView style ={styles.container} horizontal showsHorizontalScrollIndicator={false} >
+                {DATA.map((ele,index) => {
+                    return (
+                        <View key={index} style={styles.item}>
+                            <Image
+                                style={styles.picture}
+                                source={ele.img}
+                            />
+                             
+                            <Text style={styles.title}>{ele.title}</Text>
+                        </View>
+                    );
+                })}
+            </ScrollView>
     );
-  };
-  const styles = StyleSheet.create({
+};
+const styles = StyleSheet.create({
+    
     container: {
-      marginTop: 20,
+      height: 200,
+      top: 60,
     },
     item: {
-  
-      marginLeft: 10,
-      borderBottomLeftRadius: 15,
-      borderBottomRightRadius: 15,
-      borderTopRightRadius: 15,
-      borderTopLeftRadius: 15,
-      overflow: 'hidden',
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 1,
-      },
-      shadowOpacity: 0.22,
-      shadowRadius: 2.22,
-  
-      elevation: 1,
+        width:110,
+        height:162,
+        marginLeft: 10,
+        borderBottomLeftRadius: 15,
+        borderBottomRightRadius: 15,
+        borderTopRightRadius: 15,
+        borderTopLeftRadius: 15,
+        overflow: 'hidden',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        backgroundColor:'#F5F7FA',
+    
+
+        
     },
     title: {
-      textAlign: 'center',
-      margin: 5,
+        textAlign: 'center',
+        margin: 5,
     },
     picture: {
-      width: 119,
-      height: 100,
+        width: 119,
+        height: 100,
     },
-  });
-  export default TopProducts;
+});
+export default TopProducts;
