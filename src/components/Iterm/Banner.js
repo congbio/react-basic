@@ -6,7 +6,7 @@ const Banner = () => {
     <View style={styles.container}>
       <Image
         style={styles.logo}
-        source={require('../assets/img/download.jpg')}
+        source={require('../../assets/img/download.jpg')}
       />
       <View style={styles.title}>
         <Text style={styles.title_main}>A Cong - PNV23B</Text>

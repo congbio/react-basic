@@ -16,42 +16,42 @@ const TopProducts = () => {
         {
             id: '1',
             title: 'Second Item',
-            img: require('../assets/img/image133.png'),
+            img: require('../../assets/img/image133.png'),
         },
         {
             id: '2',
             title: 'Third Item',
-            img: require('../assets/img/image134.png'),
+            img: require('../../assets/img/image134.png'),
 
         },
         {
             id: '3',
             title: 'First Item',
-            img: require('../assets/img/image135.png'),
+            img: require('../../assets/img/image135.png'),
 
         },
         {
             id: '4',
             title: 'Second Item',
-            img: require('../assets/img/image20.png'),
+            img: require('../../assets/img/image20.png'),
 
         },
         {
             id: '5',
             title: 'Third Item',
-            img: require('../assets/img/image21.png'),
+            img: require('../../assets/img/image21.png'),
 
         }, ,
         {
             id: '6',
             title: 'Third Item',
-            img: require('../assets/img/image22.png'),
+            img: require('../../assets/img/image22.png'),
 
         }, ,
         {
             id: '7',
             title: 'Third Item',
-            img: require('../assets/img/image23.png'),
+            img: require('../../assets/img/image23.png'),
 
         },
     ];
