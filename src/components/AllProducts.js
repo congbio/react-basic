@@ -39,7 +39,7 @@ const TopProducts = () => {
             title: 'Third Item',
             img: require('../assets/img/image21.png'),
 
-        }, ,
+        }, ,    
         {
             id: '6',
             title: 'Third Item',
@@ -61,7 +61,8 @@ const TopProducts = () => {
                 styles.item,{
                     width: (windowWidth - 46) / 2,
                 },
-            ]}>
+            ]}
+            >
             <Image
                 style={styles.picture}
                 source={item.img}
@@ -73,6 +74,7 @@ const TopProducts = () => {
     return (
         <View style={styles.container}>
             <FlatList
+                showsVerticalScrollIndicator ={false}
                 columnWrapperStyle={{ justifyContent: 'space-between' }}
                 data={DATA}
                 numColumns={2}
